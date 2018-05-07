@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P2Y-8d-hVJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dosis-Regular.ttf">
+            <string>Dosis-Regular</string>
+        </array>
+        <array key="Dosis-SemiBold.ttf">
+            <string>Dosis-SemiBold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="YWZ-aw-7rT">
+            <objects>
+                <navigationController id="P2Y-8d-hVJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xbM-TN-4xE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ejB-Qc-JAa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lj9-SO-r5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WYViewController" customModule="WhatYourWard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT YOUR WARD?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-uL-f1q">
+                                <rect key="frame" x="0.0" y="24" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Y0g-rU-imi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6p-KX-mPG">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <connections>
+                                    <segue destination="aP3-am-QB0" kind="embed" identifier="HomeToMapEmbedSegueIdentifier" id="rOx-Ep-l0a"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7m-Gd-ikC">
+                                <rect key="frame" x="0.0" y="591" width="375" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scd-lP-kF9">
+                                        <rect key="frame" x="227" y="16" width="140" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="062-Gt-Ixm"/>
+                                            <constraint firstAttribute="height" constant="44" id="pac-KH-9Mq"/>
+                                        </constraints>
+                                        <state key="normal" title="NEXT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="X1v-kn-8Tv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="CONFIRM YOUR LOCATION, ADJUST IF REQUIRED" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Umb-Vb-SOF">
+                                        <rect key="frame" x="10" y="8" width="212" height="60"/>
+                                        <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Scd-lP-kF9" firstAttribute="centerY" secondItem="T7m-Gd-ikC" secondAttribute="centerY" id="Ded-IL-ekH"/>
+                                    <constraint firstItem="Scd-lP-kF9" firstAttribute="leading" secondItem="Umb-Vb-SOF" secondAttribute="trailing" constant="5" id="J0M-Gu-Ncm"/>
+                                    <constraint firstAttribute="height" constant="76" id="Xfa-Fy-B38"/>
+                                    <constraint firstAttribute="bottom" secondItem="Umb-Vb-SOF" secondAttribute="bottom" constant="8" id="eYl-Vk-h5s"/>
+                                    <constraint firstAttribute="trailing" secondItem="Scd-lP-kF9" secondAttribute="trailing" constant="8" id="f4C-pW-iOB"/>
+                                    <constraint firstItem="Umb-Vb-SOF" firstAttribute="top" secondItem="T7m-Gd-ikC" secondAttribute="top" constant="8" id="msi-as-HBx"/>
+                                    <constraint firstItem="Umb-Vb-SOF" firstAttribute="leading" secondItem="T7m-Gd-ikC" secondAttribute="leading" constant="10" id="uGl-oO-btz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Od-uL-f1q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Ad-Zu-agn"/>
+                            <constraint firstItem="4Od-uL-f1q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="24" id="2z0-NU-faj"/>
+                            <constraint firstItem="j6p-KX-mPG" firstAttribute="bottom" secondItem="T7m-Gd-ikC" secondAttribute="bottom" id="4bN-AJ-P9S"/>
+                            <constraint firstItem="4Od-uL-f1q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7mp-0w-87p"/>
+                            <constraint firstItem="j6p-KX-mPG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E2A-X1-23b"/>
+                            <constraint firstItem="T7m-Gd-ikC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kph-dA-YvM"/>
+                            <constraint firstItem="j6p-KX-mPG" firstAttribute="top" secondItem="4Od-uL-f1q" secondAttribute="bottom" id="bsf-ld-ZlO"/>
+                            <constraint firstItem="j6p-KX-mPG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qXp-kB-lg9"/>
+                            <constraint firstItem="T7m-Gd-ikC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ufN-cn-wAO"/>
+                            <constraint firstItem="T7m-Gd-ikC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yZW-zY-hTd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3EX-DT-y70"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="y7R-RY-iQz" kind="show" identifier="HomeToWardDetailSegueIdentifier" id="7ic-yZ-aA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="26.53673163418291"/>
+        </scene>
+        <!--Ward Detail View Controller-->
+        <scene sceneID="Bsm-n5-Gxm">
+            <objects>
+                <viewController id="y7R-RY-iQz" customClass="WYWardDetailViewController" customModule="WhatYourWard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xxP-Ta-Jd9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEh-0o-jCt">
+                                <rect key="frame" x="0.0" y="20" width="320" height="376"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuV-le-G3i" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZONE: Zone Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdr-a9-egu">
+                                                <rect key="frame" x="10" y="20" width="177.5" height="32"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zone Office Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hl-Br-JC3">
+                                                <rect key="frame" x="10" y="62" width="190" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="24"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zone Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96Z-LZ-xyk">
+                                                <rect key="frame" x="10" y="95.5" width="206" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="J3P-05-hMv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="23"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XIII" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-Ez-8iy">
+                                                <rect key="frame" x="236" y="95.5" width="64" height="64"/>
+                                                <color key="backgroundColor" red="0.66274509803921566" green="0.41176470588235292" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="0zn-aI-aC2"/>
+                                                    <constraint firstAttribute="width" constant="64" id="84b-Ic-wKo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="if5-tF-NTJ">
+                                                <rect key="frame" x="5" y="169.5" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="CCQ-79-H1o"/>
+                                                    <constraint firstAttribute="height" constant="44" id="axi-GS-qZ1"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <state key="normal" image="Contact"/>
+                                                <connections>
+                                                    <action selector="callZoneOffice" destination="y7R-RY-iQz" eventType="touchUpInside" id="fKL-YJ-TJQ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zone Contact Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="18I-zq-o3V">
+                                                <rect key="frame" x="54" y="176.5" width="256" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9A-Pj-NSj" userLabel="separator">
+                                                <rect key="frame" x="10" y="223.5" width="300" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="759-Tg-xxK"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WARD: Ward Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-km-89o">
+                                                <rect key="frame" x="10" y="238.5" width="189" height="32"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ward Office Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aQ-vF-Wxj">
+                                                <rect key="frame" x="10" y="280.5" width="193.5" height="31"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="24"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ward Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USu-BI-XZx">
+                                                <rect key="frame" x="10" y="314" width="206" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="xB1-ld-eBg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="23"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ9-Zd-pv5">
+                                                <rect key="frame" x="236" y="314" width="64" height="64"/>
+                                                <color key="backgroundColor" red="0.66274509800000003" green="0.41176470590000003" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="fxT-uz-Nfd"/>
+                                                    <constraint firstAttribute="width" constant="64" id="vJE-1e-Ic6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO2-lz-OJJ">
+                                                <rect key="frame" x="5" y="442" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="3jv-Ph-Q4L"/>
+                                                    <constraint firstAttribute="height" constant="44" id="k77-2Z-DQN"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <state key="normal" image="Contact"/>
+                                                <connections>
+                                                    <action selector="callWardOffice" destination="y7R-RY-iQz" eventType="touchUpInside" id="HHt-oW-2v4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-Xh-pay">
+                                                <rect key="frame" x="5" y="388" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="Vit-bA-WRv"/>
+                                                    <constraint firstAttribute="height" constant="44" id="ndr-sa-Fvw"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                <state key="normal" image="Email"/>
+                                                <connections>
+                                                    <action selector="mailWardOffice" destination="y7R-RY-iQz" eventType="touchUpInside" id="M4d-eM-BtU"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ward Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="ExW-1q-Azt">
+                                                <rect key="frame" x="54" y="395" width="256" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ward Contact Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="6de-kE-OAu">
+                                                <rect key="frame" x="54" y="449" width="256" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cYd-Ez-8iy" secondAttribute="trailing" constant="20" id="0Xd-bh-eSS"/>
+                                            <constraint firstItem="if5-tF-NTJ" firstAttribute="top" secondItem="96Z-LZ-xyk" secondAttribute="bottom" constant="10" id="2Vx-6D-h98"/>
+                                            <constraint firstItem="8Hl-Br-JC3" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="62Q-6j-apF"/>
+                                            <constraint firstItem="C3o-km-89o" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="6lq-so-qTz"/>
+                                            <constraint firstItem="8Hl-Br-JC3" firstAttribute="top" secondItem="kdr-a9-egu" secondAttribute="bottom" constant="10" id="6mI-N1-IZt"/>
+                                            <constraint firstAttribute="trailing" secondItem="6de-kE-OAu" secondAttribute="trailing" constant="10" id="8da-9Q-Ado"/>
+                                            <constraint firstItem="aQ9-Zd-pv5" firstAttribute="top" secondItem="USu-BI-XZx" secondAttribute="top" id="9FM-2D-Fbb"/>
+                                            <constraint firstItem="cYd-Ez-8iy" firstAttribute="top" secondItem="96Z-LZ-xyk" secondAttribute="top" id="9n0-ha-nhK"/>
+                                            <constraint firstItem="USu-BI-XZx" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="AiG-Tz-iFO"/>
+                                            <constraint firstItem="VDS-Xh-pay" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="5" id="BGW-sH-5rU"/>
+                                            <constraint firstItem="if5-tF-NTJ" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="5" id="BU0-s6-FiF"/>
+                                            <constraint firstItem="PO2-lz-OJJ" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="5" id="CP7-Dc-LEW"/>
+                                            <constraint firstItem="18I-zq-o3V" firstAttribute="centerY" secondItem="if5-tF-NTJ" secondAttribute="centerY" id="E9t-kM-2q0"/>
+                                            <constraint firstAttribute="trailing" secondItem="o9A-Pj-NSj" secondAttribute="trailing" constant="10" id="HuJ-RB-bW0"/>
+                                            <constraint firstItem="6de-kE-OAu" firstAttribute="centerY" secondItem="PO2-lz-OJJ" secondAttribute="centerY" id="IYE-Km-nKL"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Hl-Br-JC3" secondAttribute="trailing" constant="10" id="J08-Ug-rjQ"/>
+                                            <constraint firstItem="PO2-lz-OJJ" firstAttribute="top" secondItem="VDS-Xh-pay" secondAttribute="bottom" constant="10" id="JY4-1E-qzM"/>
+                                            <constraint firstItem="96Z-LZ-xyk" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="Mtr-Lh-720"/>
+                                            <constraint firstItem="USu-BI-XZx" firstAttribute="top" secondItem="3aQ-vF-Wxj" secondAttribute="bottom" constant="3" id="N2o-um-EN2"/>
+                                            <constraint firstItem="VDS-Xh-pay" firstAttribute="top" secondItem="USu-BI-XZx" secondAttribute="bottom" constant="10" id="PeZ-tp-Vjb"/>
+                                            <constraint firstItem="ExW-1q-Azt" firstAttribute="centerY" secondItem="VDS-Xh-pay" secondAttribute="centerY" id="QGq-EU-fWw"/>
+                                            <constraint firstItem="ExW-1q-Azt" firstAttribute="leading" secondItem="VDS-Xh-pay" secondAttribute="trailing" constant="5" id="Qco-Dd-Up0"/>
+                                            <constraint firstItem="o9A-Pj-NSj" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="RJN-Cb-4Y0"/>
+                                            <constraint firstItem="3aQ-vF-Wxj" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="TZM-Ka-kcV"/>
+                                            <constraint firstItem="o9A-Pj-NSj" firstAttribute="top" secondItem="if5-tF-NTJ" secondAttribute="bottom" constant="10" id="aMJ-dg-QGc"/>
+                                            <constraint firstAttribute="trailing" secondItem="aQ9-Zd-pv5" secondAttribute="trailing" constant="20" id="bQJ-pb-AJr"/>
+                                            <constraint firstItem="kdr-a9-egu" firstAttribute="top" secondItem="OuV-le-G3i" secondAttribute="top" constant="20" id="d8S-6m-Jhd"/>
+                                            <constraint firstItem="3aQ-vF-Wxj" firstAttribute="top" secondItem="C3o-km-89o" secondAttribute="bottom" constant="10" id="f1O-77-D0o"/>
+                                            <constraint firstAttribute="trailing" secondItem="18I-zq-o3V" secondAttribute="trailing" constant="10" id="fXs-g8-Fi6"/>
+                                            <constraint firstAttribute="trailing" secondItem="ExW-1q-Azt" secondAttribute="trailing" constant="10" id="jc1-4g-4wB"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="C3o-km-89o" secondAttribute="trailing" constant="10" id="jrW-me-FXn"/>
+                                            <constraint firstItem="kdr-a9-egu" firstAttribute="leading" secondItem="OuV-le-G3i" secondAttribute="leading" constant="10" id="jwb-Ke-E0B"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3aQ-vF-Wxj" secondAttribute="trailing" constant="10" id="mQ5-9X-S9J"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kdr-a9-egu" secondAttribute="trailing" constant="10" id="nNW-3v-Yfz"/>
+                                            <constraint firstItem="18I-zq-o3V" firstAttribute="leading" secondItem="if5-tF-NTJ" secondAttribute="trailing" constant="5" id="peJ-kU-KeM"/>
+                                            <constraint firstItem="cYd-Ez-8iy" firstAttribute="leading" secondItem="96Z-LZ-xyk" secondAttribute="trailing" constant="20" id="sfG-Ns-ibX"/>
+                                            <constraint firstItem="C3o-km-89o" firstAttribute="top" secondItem="if5-tF-NTJ" secondAttribute="bottom" constant="25" id="wmf-se-gcF"/>
+                                            <constraint firstItem="96Z-LZ-xyk" firstAttribute="top" secondItem="8Hl-Br-JC3" secondAttribute="bottom" constant="3" id="xN9-px-tqj"/>
+                                            <constraint firstItem="aQ9-Zd-pv5" firstAttribute="leading" secondItem="USu-BI-XZx" secondAttribute="trailing" constant="20" id="yGG-Cw-9aW"/>
+                                            <constraint firstAttribute="bottom" secondItem="PO2-lz-OJJ" secondAttribute="bottom" constant="10" id="yKg-cL-2qW"/>
+                                            <constraint firstItem="6de-kE-OAu" firstAttribute="leading" secondItem="PO2-lz-OJJ" secondAttribute="trailing" constant="5" id="yP2-d6-5IL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OuV-le-G3i" firstAttribute="top" secondItem="BEh-0o-jCt" secondAttribute="top" id="6ni-CB-WtC"/>
+                                    <constraint firstItem="OuV-le-G3i" firstAttribute="width" secondItem="BEh-0o-jCt" secondAttribute="width" id="YrN-4u-JuL"/>
+                                    <constraint firstItem="OuV-le-G3i" firstAttribute="leading" secondItem="BEh-0o-jCt" secondAttribute="leading" id="ebc-hp-s2F"/>
+                                    <constraint firstAttribute="bottom" secondItem="OuV-le-G3i" secondAttribute="bottom" id="h4z-XA-8NG"/>
+                                    <constraint firstAttribute="trailing" secondItem="OuV-le-G3i" secondAttribute="trailing" id="ybt-RH-Tgx"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmg-aK-eCH" userLabel="Join View">
+                                <rect key="frame" x="10" y="406" width="300" height="64"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp" translatesAutoresizingMaskIntoConstraints="NO" id="kvi-Rn-flV">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="kvi-Rn-flV" secondAttribute="height" multiplier="1:1" id="xZY-om-HD5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKG-aj-9yq">
+                                        <rect key="frame" x="64" y="0.0" width="236" height="64"/>
+                                        <color key="backgroundColor" red="0.61176470588235299" green="0.87058823529411766" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Dosis-SemiBold" family="Dosis" pointSize="21"/>
+                                        <state key="normal" title="JOIN WARD GROUP"/>
+                                        <connections>
+                                            <action selector="joinButtonPressed" destination="y7R-RY-iQz" eventType="touchUpInside" id="crU-o6-Ffy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.84607769691780821" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kvi-Rn-flV" firstAttribute="height" secondItem="hmg-aK-eCH" secondAttribute="height" id="Ivl-6S-nbR"/>
+                                    <constraint firstItem="kvi-Rn-flV" firstAttribute="leading" secondItem="hmg-aK-eCH" secondAttribute="leading" id="LAa-Fd-HfD"/>
+                                    <constraint firstAttribute="height" constant="64" id="PcN-f0-Q6l"/>
+                                    <constraint firstItem="aKG-aj-9yq" firstAttribute="top" secondItem="hmg-aK-eCH" secondAttribute="top" id="ZbV-13-mon"/>
+                                    <constraint firstAttribute="trailing" secondItem="aKG-aj-9yq" secondAttribute="trailing" id="aWv-2u-u5Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="aKG-aj-9yq" secondAttribute="bottom" id="hF3-Ev-BjD"/>
+                                    <constraint firstItem="aKG-aj-9yq" firstAttribute="leading" secondItem="kvi-Rn-flV" secondAttribute="trailing" id="lAC-CY-nUw"/>
+                                    <constraint firstItem="kvi-Rn-flV" firstAttribute="top" secondItem="hmg-aK-eCH" secondAttribute="top" id="qlB-rd-wdI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UBf-oG-kpA" firstAttribute="trailing" secondItem="hmg-aK-eCH" secondAttribute="trailing" constant="10" id="7HA-Oa-eHe"/>
+                            <constraint firstItem="UBf-oG-kpA" firstAttribute="bottom" secondItem="hmg-aK-eCH" secondAttribute="bottom" constant="10" id="7La-lK-k1J"/>
+                            <constraint firstItem="BEh-0o-jCt" firstAttribute="top" secondItem="UBf-oG-kpA" secondAttribute="top" id="Iny-gg-0W3"/>
+                            <constraint firstItem="BEh-0o-jCt" firstAttribute="leading" secondItem="UBf-oG-kpA" secondAttribute="leading" id="Z8s-h0-6VG"/>
+                            <constraint firstItem="hmg-aK-eCH" firstAttribute="leading" secondItem="UBf-oG-kpA" secondAttribute="leading" constant="10" id="fQB-t6-sAP"/>
+                            <constraint firstItem="UBf-oG-kpA" firstAttribute="trailing" secondItem="BEh-0o-jCt" secondAttribute="trailing" id="hYt-e3-sf4"/>
+                            <constraint firstItem="hmg-aK-eCH" firstAttribute="top" secondItem="BEh-0o-jCt" secondAttribute="bottom" constant="10" id="ia9-G7-cnd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UBf-oG-kpA"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="joinButton" destination="aKG-aj-9yq" id="xmd-Je-fMP"/>
+                        <outlet property="joinButtonContainer" destination="hmg-aK-eCH" id="Jqk-kh-so2"/>
+                        <outlet property="joinIcon" destination="kvi-Rn-flV" id="oXW-mj-gtW"/>
+                        <outlet property="wardContact" destination="6de-kE-OAu" id="G0X-DP-f8T"/>
+                        <outlet property="wardContactButton" destination="PO2-lz-OJJ" id="5ma-0g-7bT"/>
+                        <outlet property="wardEmail" destination="ExW-1q-Azt" id="rWc-R7-E0F"/>
+                        <outlet property="wardEmailButton" destination="VDS-Xh-pay" id="pbi-wR-Jt3"/>
+                        <outlet property="wardName" destination="C3o-km-89o" id="FJx-Qb-flI"/>
+                        <outlet property="wardNumber" destination="aQ9-Zd-pv5" id="W7k-37-Xm5"/>
+                        <outlet property="wardOfficeAddress" destination="USu-BI-XZx" id="wWe-B8-CEz"/>
+                        <outlet property="zonalContact" destination="18I-zq-o3V" id="Sew-kB-Amf"/>
+                        <outlet property="zonalOfficeAddress" destination="96Z-LZ-xyk" id="Fgi-vp-j73"/>
+                        <outlet property="zoneContactButton" destination="if5-tF-NTJ" id="xbF-Cc-7vS"/>
+                        <outlet property="zoneName" destination="kdr-a9-egu" id="MUC-7D-hpQ"/>
+                        <outlet property="zoneNumber" destination="cYd-Ez-8iy" id="g3p-1i-gzu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egE-De-fA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="26.53673163418291"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="dNm-h6-A2P">
+            <objects>
+                <viewController id="aP3-am-QB0" customClass="WYMapViewController" customModule="WhatYourWard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qYf-vs-hlf" customClass="MKMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wle-eW-dql"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2IV-jt-mdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="-652"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Contact" width="59" height="59"/>
+        <image name="Email" width="59" height="59"/>
+        <image name="WhatsApp" width="64" height="64"/>
+    </resources>
+</document>
